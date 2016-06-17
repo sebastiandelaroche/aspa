@@ -1,0 +1,23 @@
+<section layout="row" layout-sm="column" layout-align="left left" layout-wrap>
+    <button type="button" class="btn btn-default" ng-click="openModalCrear()">Crear tipo cliente</button>
+</section>
+
+<section>
+    <md-content class="md-padding">
+        <sae:listageneral data="{{data}}"></sae:listageneral>
+    </md-content>
+</section>
+
+<!--Modal para el form de crear tipo cliente-->
+<sae:modal config="{{modalFormCrear}}"></sae:modal>
+<!--Form para la creacion de tipo cliente-->
+<div id="form-crear" class="collapse">
+  <sae:form data="{{formCrear}}"></sae:form>  
+</div>
+
+<!--Modal para el form de editar tipo cliente-->
+<!--<sae:modal config="{{modalFormEditar}}"></sae:modal>-->
+<!--Form para la edicion de tipo cliente-->
+<!--<div id="form-editar" class="collapse">
+  <sae:form data="{{formEditar}}"></sae:form>  
+</div>-->

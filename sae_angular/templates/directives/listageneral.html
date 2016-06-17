@@ -1,0 +1,41 @@
+<div><!--
+  <div class="row">
+    <div class="col-xs-12">
+      <form name="searchForm" novalidate ng-submit="applyGlobalSearch()">
+        <div class="input-group">
+          <input type="text" class="form-control" 
+                 placeholder="Buscar tipo cliente" 
+                 name="searchTerm" 
+                 ng-model="globalSearchTerm" required />
+          
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit" 
+                    ng-disabled="searchForm.$invalid">
+              <i class="fa fa-search fa-lg"></i> 
+          </button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>-->
+  <table ng-table-dynamic="tableParams with cols"  class="table" show-filter="true">
+      <tr ng-repeat="row in $data">
+        <td ng-repeat="col in $columns">
+          <div ng-if="col.dataType !== 'command'">
+            {{row[col.field]}}
+          </div>
+          <div ng-if="col.dataType === 'command'" >
+            <a ng-if="col.acciones.editar.show == true" href="" ng-click="editar(col.acciones.editar.connect, row.id)">
+              <i class="fa fa-pencil-square-o fa-lg"></i>
+            </a>
+            <a ng-if="col.acciones.eliminar.show == true" href="" ng-click="eliminar(col.acciones.eliminar.connect, row)">
+              <i class="fa fa-trash-o fa-lg"></i>
+            </a>
+            <a ng-if="col.acciones.ver.show == true" href="" ng-click="ver(col.acciones.ver.connect, row.id)">
+              <i class="fa fa-share-square-o fa-lg"></i>
+            </a>
+          </div>
+        </td>
+      </tr>
+  </table>
+</div>

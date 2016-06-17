@@ -1,0 +1,29 @@
+{
+  "name": "sae_angular",
+  "description": "FrontEnd software sae",
+  "main": "index.html",
+  "moduleType": [],
+  "authors": [
+    "Johan Sebastian De La Roche lopez"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "angular-route": "~1.4.8",
+    "metisMenu": "~2.2.0",
+    "morris.js": "~0.5.1",
+    "font-awesome": "~4.5.0",
+    "ng-table": "~0.8.3",
+    "angular-material": "~1.0.1"
+  }
+}

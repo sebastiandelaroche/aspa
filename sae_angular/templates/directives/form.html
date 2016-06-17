@@ -1,0 +1,30 @@
+<div>
+  <form class="sae-form" action="{{config.action}}" method="{{config.method}}">
+    <div class="form-group" ng-repeat="camp in config.camps" ng-switch="camp.type">
+      <div ng-switch-when="text">
+        <label for="{{camp.name}}" class="control-label">{{camp.label}}</label>
+        <input id="{{camp.name}}" 
+               class="input form-control" 
+               name="{{camp.name}}" 
+               ng-model="camp.value" 
+               validate="{{camp.validate}}" 
+               message="{{camp.message}}"
+               ng-required="{{camp.validate}}"
+               placeholder="{{camp.label}}"/>
+      </div>
+      <div ng-switch-when="textarea">
+        <label for="{{camp.name}}" class="control-label">{{camp.label}}</label>
+        <textarea id="{{camp.name}}" 
+               class="input form-control" 
+               name="{{camp.name}}" 
+               ng-model="camp.value" 
+               validate="{{camp.validate}}" 
+               message="{{camp.message}}"
+               ng-required="{{camp.validate}}"
+               placeholder="{{camp.label}}"></textarea>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-default" ng-click="config.fn()">Crear</button>
+    </div>
+</div>

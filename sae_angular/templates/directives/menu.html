@@ -1,0 +1,14 @@
+<ul class="nav" id="side-menu">    
+    <li ng-repeat="value in values">
+        <a href="#">
+        	<i class="fa fa-bar-chart-o fa-fw"></i> 
+        	{{value.nombre}}
+        	<span class="fa arrow"></span>
+        </a>
+        <ul ng-if="value.controladores.length > 0" class="nav nav-second-level">
+            <li ng-repeat="controlador in value.controladores">
+                <a href="{{controlador.nombreruta}}">{{controlador.nombre}}</a>
+            </li>
+        </ul>
+    </li>    
+</ul>

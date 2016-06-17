@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="min/css.min.css">
+
+	<script type="text/javascript" src="min/librerias.min.js"></script>
+	<script type="text/javascript" src="min/app.min.js"></script>
+
+	<title>SAE</title>
+</head>
+<body ng-app="SAE" ng-controller="InicioController">
+	<div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">SAE</a>
+            </div>
+
+            <sae:header></sae:header>
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                	<sae:menu data="{{modulos}}"></sae:menu>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!--Contenedor del software -->
+        <div id="page-wrapper" style="padding-top : 10px;">
+            <!--Begin alerta de error-->
+            <div id="contenedorError"></div>
+            <!--End alerta de error-->
+            <div id="content" class="panel panel-default">
+                <div ng-view class="panel-body">
+                </div>
+            </div>
+        </div>
+	</div>
+
+</body>
+</html>
