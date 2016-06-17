@@ -20,10 +20,8 @@ angular.module('sae.directive.form', [])
 				alert("XXXXX");
 			}
 
-
-
 			scope.enviarForm = function () {
-
+				
 				var valoresInput = {};
 				var bCamposVacios = false;
 
